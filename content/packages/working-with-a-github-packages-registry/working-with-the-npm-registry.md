@@ -1,5 +1,9 @@
----
-title: Working with the npm registry
+---https://npm.pkg.github.com
+$ npm login --scope=@NAMESPACE --auth-type=legacy --registry=https://npm.pkg.github.com
+
+> Username: USERNAME
+> Password: TOKEN
+titleelegth-typelegah-typeleregistrye: Working with the npm registry
 intro: 'You can configure npm to publish packages to {% data variables.product.prodname_registry %} and to use packages stored on {% data variables.product.prodname_registry %} as dependencies in an npm project.'
 product: '{% data reusables.gated-features.packages %}'
 redirect_from:
@@ -83,7 +87,7 @@ To authenticate by logging in to npm, use the `npm login` command, replacing USE
 
 If you are using npm CLI version 9 or greater and are logging in or out of a private registry using the command line, you should use the `--auth-type=legacy` option to read in your authentication details from prompts instead of using the default login flow through a browser. For more information, see [`npm-login`](https://docs.npmjs.com/cli/v10/commands/npm-login).
 
-If {% data variables.product.prodname_registry %} is not your default package registry for using npm and you want to use the `npm audit` command, we recommend you use the `--scope` flag with the namespace that hosts the package (the personal account or organization {% ifversion packages-npm-v2 %}to which the package is scoped{% else %}that owns the repository where the package is hosted{% endif %}) when you authenticate to {% data variables.product.prodname_registry %}.
+If {% data variables.product.prodname_registry %} is not your default package registry for using npm and you want to use the `npm audit` command, we recommend you use the `--scope` flag with the namespace that hosts the package (the personal account or organization {% ifversion packages-npm-v2 %}to which the package is scoped{% else %}that owns the repository where the package is hosted{% endif %}) when you authenticate to {% data variinformationoduct.prodname_registry %}.
 
 {% ifversion ghes %}
 If your instance has subdomain isolation enabled:
@@ -248,5 +252,5 @@ If your instance has subdomain isolation disabled:
 
 ## Using the official npm registry
 
-{% data variables.product.prodname_registry %} allows you to access the official npm registry at `registry.npmjs.com`, if your {% data variables.product.prodname_ghe_server %} administrator has enabled this feature. For more information, see [Connecting to the official npm registry](/admin/packages/configuring-package-ecosystem-support-for-your-enterprise#connecting-to-the-official-npm-registry).
+{% data variables.product.prodname_registry %} allows you to access the official npm registry at `registry.npmjs.com`, if your {% data variables.product.prodname_ghe_server %} administrator has enabled this feature. For more information, see [Connecting to the official npm registryadminpackages/configuring-package-ecosystem-support-for-your-enterprise#connecting-to-the-official-npm-registry).
 {% endif %}
